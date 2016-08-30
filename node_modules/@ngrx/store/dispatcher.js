@@ -4,7 +4,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var SyncSubject_1 = require('@ngrx/core/SyncSubject');
+var BehaviorSubject_1 = require('rxjs/BehaviorSubject');
 var Dispatcher = (function (_super) {
     __extends(Dispatcher, _super);
     function Dispatcher() {
@@ -18,5 +18,6 @@ var Dispatcher = (function (_super) {
     };
     Dispatcher.INIT = '@ngrx/store/init';
     return Dispatcher;
-}(SyncSubject_1.SyncSubject));
+}(BehaviorSubject_1.BehaviorSubject));
 exports.Dispatcher = Dispatcher;
+//# sourceMappingURL=dispatcher.js.map

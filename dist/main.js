@@ -2,6 +2,8 @@
 var platform_browser_dynamic_1 = require('@angular/platform-browser-dynamic');
 var core_1 = require('@angular/core');
 var _1 = require('./app/');
+// import { Store, StoreModule } from '@ngrx/store';
+// import { NgModule } from '@angular/core';
 if (_1.environment.production) {
     core_1.enableProdMode();
 }

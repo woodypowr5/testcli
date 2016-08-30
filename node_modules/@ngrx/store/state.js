@@ -8,7 +8,7 @@ var withLatestFrom_1 = require('rxjs/operator/withLatestFrom');
 var scan_1 = require('rxjs/operator/scan');
 var observeOn_1 = require('rxjs/operator/observeOn');
 var queue_1 = require('rxjs/scheduler/queue');
-var SyncSubject_1 = require('@ngrx/core/SyncSubject');
+var BehaviorSubject_1 = require('rxjs/BehaviorSubject');
 var State = (function (_super) {
     __extends(State, _super);
     function State(_initialState, action$, reducer$) {
@@ -23,5 +23,6 @@ var State = (function (_super) {
         state$.subscribe(function (value) { return _this.next(value); });
     }
     return State;
-}(SyncSubject_1.SyncSubject));
+}(BehaviorSubject_1.BehaviorSubject));
 exports.State = State;
+//# sourceMappingURL=state.js.map
