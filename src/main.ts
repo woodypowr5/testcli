@@ -4,6 +4,8 @@ import { AppModule }              from './app/app.module';
 import { AppComponent, environment } from './app/';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
+platformBrowserDynamic().bootstrapModule(AppModule);
+
 // import { Store, StoreModule } from '@ngrx/store';
 // import { NgModule } from '@angular/core';
 
