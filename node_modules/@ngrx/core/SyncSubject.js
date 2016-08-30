@@ -28,3 +28,4 @@ var SyncSubject = (function (_super) {
     return SyncSubject;
 }(Subject_1.Subject));
 exports.SyncSubject = SyncSubject;
+//# sourceMappingURL=SyncSubject.js.map

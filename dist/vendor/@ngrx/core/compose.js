@@ -13,3 +13,4 @@ exports.compose = function () {
         return rest.reduceRight(function (composed, fn) { return fn(composed); }, last(arg));
     };
 };
+//# sourceMappingURL=compose.js.map

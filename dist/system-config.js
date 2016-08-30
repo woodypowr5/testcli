@@ -40,7 +40,6 @@ var barrels = [
     'app',
     'app/shared',
     'app/test-component',
-    'app/test',
 ];
 var cliSystemConfigPackages = {};
 barrels.forEach(function (barrelName) {

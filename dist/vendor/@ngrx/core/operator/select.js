@@ -21,3 +21,4 @@ function select(pathOrMapFn) {
     return distinctUntilChanged_1.distinctUntilChanged.call(mapped$);
 }
 exports.select = select;
+//# sourceMappingURL=select.js.map

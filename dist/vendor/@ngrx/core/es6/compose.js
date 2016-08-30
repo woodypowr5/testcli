@@ -8,3 +8,4 @@ export const compose = (...functions) => {
         return rest.reduceRight((composed, fn) => fn(composed), last(arg));
     };
 };
+//# sourceMappingURL=compose.js.map
