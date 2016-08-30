@@ -15,3 +15,4 @@ export function select(pathOrMapFn, ...paths) {
     }
     return distinctUntilChanged.call(mapped$);
 }
+//# sourceMappingURL=select.js.map

@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var test_component_1 = require('./test/test.component');
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'app works!';
@@ -19,8 +18,7 @@ var AppComponent = (function () {
             moduleId: module.id,
             selector: 'app-root',
             templateUrl: 'app.component.html',
-            styleUrls: ['app.component.css'],
-            directives: [test_component_1.TestComponent]
+            styleUrls: ['app.component.css']
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
