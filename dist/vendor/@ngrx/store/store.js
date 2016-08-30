@@ -4,26 +4,30 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var SyncSubject_1 = require('@ngrx/core/SyncSubject');
 var select_1 = require('@ngrx/core/operator/select');
+var Observable_1 = require('rxjs/Observable');
 var Store = (function (_super) {
     __extends(Store, _super);
-    function Store(_dispatcher, _reducer, state$, initialState) {
-        var _this = this;
-        _super.call(this, initialState);
+    function Store(_dispatcher, _reducer, state$) {
+        _super.call(this);
         this._dispatcher = _dispatcher;
         this._reducer = _reducer;
         this.select = select_1.select.bind(this);
-        state$.subscribe(function (state) { return _super.prototype.next.call(_this, state); });
+        this.source = state$;
     }
+    Store.prototype.lift = function (operator) {
+        var store = new Store(this._dispatcher, this._reducer, this);
+        store.operator = operator;
+        return store;
+    };
     Store.prototype.replaceReducer = function (reducer) {
-        this._reducer.replaceReducer(reducer);
+        this._reducer.next(reducer);
     };
     Store.prototype.dispatch = function (action) {
-        this._dispatcher.dispatch(action);
+        this._dispatcher.next(action);
     };
     Store.prototype.next = function (action) {
-        this._dispatcher.dispatch(action);
+        this._dispatcher.next(action);
     };
     Store.prototype.error = function (err) {
         this._dispatcher.error(err);
@@ -32,5 +36,6 @@ var Store = (function (_super) {
         // noop
     };
     return Store;
-}(SyncSubject_1.SyncSubject));
+}(Observable_1.Observable));
 exports.Store = Store;
+//# sourceMappingURL=store.js.map
